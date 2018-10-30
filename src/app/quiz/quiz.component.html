@@ -1,0 +1,49 @@
+<div class="container-fluid"
+     style="background-color: #2B2B37; color: white; font-family: 'Niramit', sans-serif; min-height: 100vh;">
+  <div class="row">
+    <mat-progress-bar mode="determinate" [value]="progress" color="primary"></mat-progress-bar>
+    <div class="col-md-12">
+      <div class="container">
+        <h3 style="padding: 8% 0 5% 0; text-align: center;">
+          {{ questions[counter] }}
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1 col-sm-0 col-xs-0">
+
+      </div>
+      <div class="col-md-5 col-sm-6 col-xs-6" (mouseenter)="hoverA=true" (mouseleave)="hoverA=false">
+        <mat-card class="ansCard" [class.shadow-lg]="hoverA"
+                  (click)="markAnswer('a')">
+          <mat-card-content>
+            <h5 style='color: #bababa;'>
+              {{ ansA[counter] }}
+            </h5>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+      <div class="col-md-5 col-sm-6 col-xs-6" (mouseenter)="hoverB=true" (mouseleave)="hoverB=false">
+        <mat-card class="ansCard" [class.shadow-lg]="hoverB" (click)="markAnswer('b')">
+          <mat-card-content>
+            <h5 style='color: #bababa;'>
+              {{ ansB[counter] }}
+            </h5>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-md-1 col-sm-0 col-xs-0">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
