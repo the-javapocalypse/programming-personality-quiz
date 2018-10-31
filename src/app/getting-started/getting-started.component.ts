@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-getting-started',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GettingStartedComponent implements OnInit {
 
-  constructor() { }
+  startQuiz = false;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
+
+  }
+
+  start() {
+    this.startQuiz = true;
+
+    setTimeout(() => {
+      this.router.navigate(['Quiz']);
+    }, 5000);
   }
 
 }

@@ -1,3 +1,19 @@
-<p>
-  getting-started works!
-</p>
+<div class="container-fluid mainContainer">
+  <br><br>
+  <div class="container text-center">
+    <div [class.hide]="startQuiz">
+      <img src="https://pbs.twimg.com/media/Cs4yz5TWIAAl5f6.jpg" class="img-fluid" style="display: block; margin: 0 auto; height: 70vh;">
+      <br>
+      <h2>Too lazy to make a landing page. Let's start the quiz maybe?</h2>
+    </div>
+    <div [class.hide]="!startQuiz">
+      <img src="https://pbs.twimg.com/media/ChnyOSVWMAEz9N2.jpg" class="img-fluid" style="display: block; margin: 0 auto; height: 70vh;">
+      <br>
+      <h2>Very Well.. Hold on while I'm preparing the quiz</h2>
+    </div>
+    <br>
+    <button class="btn btn-default" (click)="start()" [class.hide]="startQuiz">
+      Take me to the quiz
+    </button>
+  </div>
+</div>

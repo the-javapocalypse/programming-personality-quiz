@@ -1,0 +1,24 @@
+.mainContainer {
+  background-color: #2B2B37;
+  color: white;
+  font-family: 'Niramit', sans-serif;
+  min-height: 100vh;
+}
+.hide{
+  display: none;
+}
+.ansCard{
+  background-color: #22222F;
+}
+
+.ansCard h3{
+  color: #ffffff;
+}
+
+.ansCard h5{
+  color: #949494;
+}
+
+.pad{
+  padding-top: 5vh;
+}

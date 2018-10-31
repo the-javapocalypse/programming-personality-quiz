@@ -1,3 +1,170 @@
-<p>
-  result works!
-</p>
+<div class="container-fluid mainContainer">
+
+  <div class="calculation" [class.hide]="!calculation">
+    <div class="container">
+      <div class="row" style="padding-top: 15vh; text-align: center!important;">
+        <div class="col-md-12">
+          <h1 style="text-align: center;">Calculating Result. Please wait.</h1>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 5vh;">
+        <img class="img-fluid" src="https://i.pinimg.com/originals/e1/f3/41/e1f3413bf5036045713341394f617225.gif"
+             style="margin: 0 auto; width: 70%; height: 70%;"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="calculation" [class.hide]="calculation">
+    <div class="container">
+      <div class="row" style="padding-top: 15vh; text-align: center!important;">
+        <div class="col-md-12">
+          <h1 style="text-align: center;">Your programming personality was found to be</h1>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 pad" [class.hide]="!this.personality.includes('generalist')">
+          <mat-card class="ansCard">
+            <mat-card-content>
+              <h3>
+                Generalist
+              </h3>
+              <hr>
+              <h5>
+                You like to be known as a "Jack of all Trades" and a reference for others on your team. You jump at
+                every chance to enhance your skills in a wide variety technology topics, not just the ones that apply to
+                your day to day work. You don't always know when it might be useful to have these extra skills, but when
+                the time comes, you are ready. If more developers took the time to learn other skills outside of the
+                ones relevant to their project, they'd work more seamlessly with the rest of their organization because
+                they'd have more empathy and understanding of the challenges that their colleagues face.
+              </h5>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-md-12 col-sm-12 pad" [class.hide]="!this.personality.includes('specialist')">
+          <mat-card class="ansCard">
+            <mat-card-content>
+              <h3>
+                Specialist
+              </h3>
+              <hr>
+              <h5>
+                If you're a Jack of all Trades, you're a master of none. Mastery in one or two areas is what makes you
+                valuable. What's the point of learning skills for other jobs you don't have and can't control? When you
+                plan for a project or do technical research, it's always focused on something you're working on. You
+                don't get side-tracked. If you learn a new skill, it's because the project requires that you do it. Most
+                or all of your hobby projects are also building your mastery of the skills you use at your job.
+              </h5>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+
+        <div class="col-md-12 col-sm-12 pad" [class.hide]="!this.personality.includes('independent')">
+          <mat-card class="ansCard">
+            <mat-card-content>
+              <h3>
+                Independent
+              </h3>
+              <hr>
+              <h5>
+                You prefer to spend most of your time working in an isolated environment. You rarely want to work with a
+                team
+                because you have a better chance of solving problems on your own. If you do have to collaborate on the
+                direction of a project, you dislike it when you have to defend your position or when others try to muddy
+                your plans for the project. It's better to have one strong vision for a project from the lead programmer
+                on that project. Having a large team or allowing others to have significant control over the project
+                risks communication errors, a muddied code base, and inefficiencies. If one developer has a firm grasp
+                on the entire codebase, they'll be much better at fixing and improving it quickly.
+              </h5>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-md-12 col-sm-12 pad" [class.hide]="!this.personality.includes('collaborative')">
+          <mat-card class="ansCard">
+            <mat-card-content>
+              <h3>
+                Collaborative
+              </h3>
+              <hr>
+              <h5>
+                Good code doesn't happen in a vacuum. You need a team to keep you energized and on your toes so that
+                you're constantly improving the project code using the entire team's varied experience and strengths.
+                You like to talk frequently with colleagues and discuss ideas so that you can learn from others and
+                spark ideas. It doesn't matter what their experience level is, you can always learn something by
+                including everyone. A solo coder can't possibly code a large software project with the speed and quality
+                that a team can.
+              </h5>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+
+        <div class="col-md-12 col-sm-12 pad" [class.hide]="!this.personality.includes('idealist')">
+          <mat-card class="ansCard">
+            <mat-card-content>
+              <h3>
+                Idealist
+              </h3>
+              <hr>
+              <h5>
+                Speed is your best weapon in a competitive industry, and to quickly prototype and build new products,
+                you need to have a flexible, pragmatic process. You don't have a few months to plan your projects, you
+                need to just start coding and a good path for the project will reveal itself. Great products are made
+                through frequent feedback and releases, so why shouldn't your plan be just as adaptable? Your plan
+                should be adapted to changes in the software, and your expertise should be adapted to the project. You
+                shouldn't spend your precious time studying a problem that you're not certain to run into while coding
+                your projects. Trying to build test coverage for every possible scenario and having long meetings
+                throughout the process are a waste of time and distract you from doing more productive work.
+              </h5>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-md-12 col-sm-12 pad" [class.hide]="!this.personality.includes('pragmist')">
+          <mat-card class="ansCard">
+            <mat-card-content>
+              <h3>
+                Pragmist
+              </h3>
+              <hr>
+              <h5>
+                You believe in the power of well-defined processes. It's crucial to an organization's success that they
+                create and follow appropriate and effective processes for building software. Trying to improvise or play
+                it by ear invites the possibility of workflow errors that can decrease the quality of the software or
+                even cause major product failures. Planning is also extremely important to you. You like to research all
+                of the things you will need to know before starting a project. It's important to find out the best
+                architecture for your software beforehand, and then strictly implement that architecture with objective
+                best practices. The more planning and scaffolding you do in the beginning, the less overall work you
+                will have to do to complete the software.
+              </h5>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div class="col-md-12 col-sm-12 pad" [class.hide]="!this.personality.includes('passionate')">
+          <mat-card class="ansCard">
+            <mat-card-content>
+              <h3>
+                Passionate
+              </h3>
+              <hr>
+              <h5>
+                "Most good programmers do programming not because they expect to get paid or get adulation by the
+                public, but because it is fun to program." (Linus Torvalds)<br>
+                You like to learn new things. You challenge yourself on a daily basis. You are always looking to learn
+                new tech. You are not only a programmer. You are a tech obsessed programmer. You enjoy coding, whether
+                it your personal side project, any open source project or simply coding cool things when you are bored.
+              </h5>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br><br><br>
+
+  </div>
+
+</div>

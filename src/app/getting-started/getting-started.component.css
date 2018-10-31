@@ -1,0 +1,9 @@
+.mainContainer {
+  background-color: #2B2B37;
+  color: white;
+  font-family: 'Niramit', sans-serif;
+  min-height: 100vh;
+}
+.hide{
+  display: none;
+}

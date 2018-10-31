@@ -23,6 +23,11 @@ export class QuizComponent implements OnInit {
 
   ngOnInit() {
 
+    if (this._Data.getCounter() === '14') {
+      this.router.navigate(['Result']);
+    }
+
+    // this._Data.deleteStorage();
     this.progress = this._Data.progress;
     this.questions = this._Data.questions;
     this.ansA = this._Data.answerA;

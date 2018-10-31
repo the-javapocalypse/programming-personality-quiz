@@ -20,7 +20,7 @@ export class QuizDataService {
     'You’ve been given a task to do that will take one man month, how big is the optimal team?',
     'A person, you don\'t know, asks you to code something which is complex. You won\'t be getting any reward in return.',
     'When you program you:',
-    'What is the ‘better’ implementation:',
+    'What is the ‘better’ implementation in your opinion?',
     'When a task, in which you have very low expertise, is assigned to you, You would:',
     'Have you ever heard of Hacktoberfest?',
     'What theme you use for IDE?'
@@ -38,7 +38,7 @@ export class QuizDataService {
     '5',
     'No. I will make an excuse that I\'m busy and can\'t help.',
     'Shut the door and the rest of the world out.',
-    'Implementation',
+    'import * from z',
     'Dive right into it and learn on the go from Stackoverflow.',
     'No.',
     'Light',
@@ -56,13 +56,14 @@ export class QuizDataService {
     '1',
     'Yes. I will do the work despite the fact that I will be getting no reward in return.',
     'Share a desk with a peer and have group meetings often to discuss what to do next.',
-    'Implementation',
+    'import a, b from z',
     'Read relevant books/take a crash course before starting the actual task.',
     'Yes.',
     'Dark'
   ];
 
   result = [];
+  personality = [];
 
   setProgress() {
     localStorage.setItem('progress', this.progress.toString());
@@ -74,8 +75,20 @@ export class QuizDataService {
     return (localStorage.getItem('progress'));
   }
 
-  getCounter(){
+  getCounter() {
     return (localStorage.getItem('counter'));
+  }
+
+  getAnswers() {
+    return (localStorage.getItem('answers'));
+  }
+
+  setPersonality() {
+    localStorage.setItem('personality', this.personality.toString());
+  }
+
+  getPersonality() {
+    return (localStorage.getItem('personality'));
   }
 
   deleteStorage() {
