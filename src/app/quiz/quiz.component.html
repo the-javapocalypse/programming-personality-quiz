@@ -15,7 +15,7 @@
       <div class="col-md-1 col-sm-0 col-xs-0">
 
       </div>
-      <div class="col-md-5 col-sm-6 col-xs-6" (mouseenter)="hoverA=true" (mouseleave)="hoverA=false">
+      <div class="col-md-5 col-sm-6 col-xs-6" (mouseenter)="hoverA=true" (mouseleave)="hoverA=false" style="padding-top: 2vh;">
         <mat-card class="ansCard" [class.shadow-lg]="hoverA"
                   (click)="markAnswer('a')">
           <mat-card-content>
@@ -27,7 +27,7 @@
       </div>
 
 
-      <div class="col-md-5 col-sm-6 col-xs-6" (mouseenter)="hoverB=true" (mouseleave)="hoverB=false">
+      <div class="col-md-5 col-sm-6 col-xs-6" (mouseenter)="hoverB=true" (mouseleave)="hoverB=false" style="padding-top: 2vh;">
         <mat-card class="ansCard" [class.shadow-lg]="hoverB" (click)="markAnswer('b')">
           <mat-card-content>
             <h5 style='color: #bababa;'>
